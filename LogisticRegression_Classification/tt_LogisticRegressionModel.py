@@ -1,13 +1,12 @@
-from self_try import LogRegModel
-from sklearn.datasets import load_breast_cancer
+from LogisticRegressionModel import LogRegModel
+from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
-import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the Breast Cancer dataset
-data = load_breast_cancer()
+data = datasets.load_breast_cancer()
 X = data.data  # Features
 y = data.target  # Labels
 
@@ -37,4 +36,3 @@ plt.title("Cost Function over Iterations: ")
 plt.xlabel("Iteration")
 plt.ylabel("Cost")
 plt.show()
-print(y_pred)
